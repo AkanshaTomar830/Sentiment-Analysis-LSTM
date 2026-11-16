@@ -10,7 +10,7 @@ from tensorflow.keras.preprocessing.text import text_to_word_sequence
 # Application configuration
 st.set_page_config(
     page_title="Sentiment Analysis",
-    page_icon="🎬",
+    page_icon="",
     layout="centered"
 )
 
@@ -92,14 +92,14 @@ if st.button("Analyze Sentiment"):
 
         if prediction >= 0.5:
 
-            st.success("Positive Sentiment 😊")
+            st.success("Positive Sentiment ")
             st.write(
                 f"Positive probability: {prediction * 100:.2f}%"
             )
 
         else:
 
-            st.error("Negative Sentiment 😞")
+            st.error("Negative Sentiment ")
             st.write(
                 f"Negative probability: {(1 - prediction) * 100:.2f}%"
             )
