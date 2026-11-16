@@ -15,8 +15,12 @@ st.set_page_config(
 )
 
 # File paths
-MODEL_PATH = "../Models/sentiment_lstm_model.keras"
-WORD_INDEX_PATH = "../Models/word_index.json"
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+
+MODEL_PATH = BASE_DIR.parent / "Models" / "sentiment_lstm_model.keras"
+WORD_INDEX_PATH = BASE_DIR.parent / "Models" / "word_index.json"
 
 VOCAB_SIZE = 10000
 MAX_LENGTH = 250
